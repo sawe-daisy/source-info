@@ -20,7 +20,6 @@ def get_sources(category):
         get_source_response = json.loads(get_sources_data)
 
         sources_list = None
-~
         if get_source_response['sources']:
             rest_here = get_source_response['sources']
             sources_list = process_results(rest_here)

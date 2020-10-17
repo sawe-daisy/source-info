@@ -1,0 +1,9 @@
+{% macro displayInfo(category) %}
+    {% for item in category %}
+        <ul>
+            <li>{{item.description}}</li>
+            <p>{{item.category}}</p>
+            <p>{{item.url}}</p>
+        </ul>
+    {% endfor %}
+{% endmacro %}
