@@ -10,3 +10,14 @@ class SourceTest:
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_source))
+
+class ArticlesTest:
+    '''
+    method to test articles
+    '''
+
+    def setUp(self):
+        self.new_article = Articles(123,'dee', 'sawe','nourl','url')
+
+    def test_instance(self):
+        self..assertTrue(isinstance(self.new_article))
