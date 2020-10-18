@@ -6,7 +6,7 @@
 
 * Github repository: https://github.com/sawe-daisy/source-info
 
-* Link to live site: 
+* Link to live site: https://source-info.herokuapp.com/
 
 ## Description
 
