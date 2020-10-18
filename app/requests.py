@@ -7,10 +7,10 @@ base_url = None
 article_url = None
 
 def configure_request(app):
-    global api_key, base_url
+    global api_key, base_url,article_url
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_SOURCE_URL']
-    article_url = app.config['ARTICLES_URL']
+    article_url = app.config["ARTICLES_URL"]
 
 def get_sources(category):
     get_sources_url = base_url.format(category, api_key)
@@ -42,12 +42,13 @@ def process_results(results):
         
     return sources_list
 
-def get_articles(domains):
+def get_articles(id):
+    
+    get_articles_url = article_url.format(id,api_key)
+ 
     '''
     Method that gets the json response to our url request
     '''
-    get_articles_url = articles_base_url.format(id, api_key)
-
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
         get_articles_response = json.loads(get_articles_data)
@@ -58,7 +59,7 @@ def get_articles(domains):
         if get_articles_response['articles']:
             articles_results_list = get_articles_response['articles']
             articles_results = process_articles(articles_results_list)
-
+            
     return articles_results
 
 def process_articles(articles):
@@ -66,10 +67,14 @@ def process_articles(articles):
     for item in articles:
         id = item.get('id')
         author = item.get('author')
+        title = item.get('title')
         urlToImage = item.get('urlToImage')
         url = item.get('url')
 
-        if urlToImage:
+        if url:
             article_object = Articles(id, author,title,urlToImage,url)
             articles_results.append(article_object)
     return articles_results
+
+
+

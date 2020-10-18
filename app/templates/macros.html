@@ -1,9 +1,13 @@
 {% macro displayInfo(category) %}
-    {% for item in category %}
-        <ul>
-            <li>{{item.description}}</li>
-            <p>{{item.category}}</p>
-            <p>{{item.url}}</p>
-        </ul>
+{% for item in category %}
+    <div class="col-md-3 mt-5">
+        <div class="card" style="width: 25rem; margin: 5px; margin-right: 10px;">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text">{{item.description|truncate(50)}}</p>
+              <a href="/sources/{{item.id}}" class="btn btn-primary">View Articles</a>
+            </div>
+          </div>
+    </div>
     {% endfor %}
 {% endmacro %}
