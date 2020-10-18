@@ -8,7 +8,7 @@ class Source:
         self.url = url
         self.category = category
 
-def Articles:
+class Articles:
     
     def __init__(self, id,author, title, urlToImage, url):
         self.id = id
