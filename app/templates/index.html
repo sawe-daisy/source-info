@@ -6,39 +6,39 @@
 {% import 'macros.html' as macro %}
 {% block content %}
 <div class="container">
-    <div class="news">
-        <h2>Technology News</h2>
+    <h2>Technology News</h2>
         <hr>
+    <div class="news">
         {{macro.displayInfo(technology)}}
     </div>
+    <h2>Science News</h2>
+    <hr>
     <div class="news">
-        <h2>Science News</h2>
-        <hr>
         {{macro.displayInfo(science)}}
     </div>
+    <h2>Business News</h2>
+    <hr>
     <div class="news">
-        <h2>Business News</h2>
-        <hr>
         {{macro.displayInfo(business_news)}}
     </div>
+    <h2>General News</h2>
+    <hr>
     <div class="news">
-        <h2>General News</h2>
-        <hr>
         {{macro.displayInfo(general)}}
-   
+    </div>
+    <h2>Entertainment News</h2>
+    <hr>
     <div class="news">
-        <h2>Entertainment News</h2>
-        <hr>
         {{macro.displayInfo(entertainment)}}
     </div>
+    <h2>Health News</h2>
+    <hr>
     <div class="news">
-        <h2>Health News</h2>
-        <hr>
         {{macro.displayInfo(health)}}
     </div>
+    <h2>Sports News</h2>
+    <hr>
     <div class="news">
-        <h2>Sports News</h2>
-        <hr>
         {{macro.displayInfo(sports)}}
     </div>
 </div>
