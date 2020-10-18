@@ -24,8 +24,8 @@ The user would like to.... :
 
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-|To display various news sources| Click the View Article button|Redirected to a page with a list of articles from the source |
-|Display the articles for the news source selected| Click Read More link| Redirected to the news source's site to read the entire article|
+|To display various news sources| Click the View Articles button|Redirected to a page with a list of articles from the source |
+|Display the articles for the news source selected| Click Read Article| Redirected to the news source's site to read the entire article|
 
 
 ## Built With
