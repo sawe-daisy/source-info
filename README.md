@@ -6,7 +6,7 @@
 
 * Github repository: https://github.com/sawe-daisy/source-info
 
-* Link to live site: https://peris-oduol-news-articles1.herokuapp.com/
+* Link to live site: 
 
 ## Description
 
@@ -39,4 +39,8 @@ The user would like to.... :
 ## Support and contact details
  Incase you come across errors, have questions, ideas ,concerns, or want to contribute to the application, feel free to reach me at :deesawe16@gmail.com
 
-### License
+## License
+
+[MIT](https://github.com/sawe-daisy/source-info/blob/master/LICENSE)
+
+Copyright (c) 2020 **sawe-daisy**
