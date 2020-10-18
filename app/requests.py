@@ -37,8 +37,9 @@ def process_results(results):
         url = item.get('url')
         category = item.get('category')
 
-        new_item = Source(id, description, url, category)
-        sources_list.append(new_item)
+        if description:
+            new_item = Source(id, description, url, category)
+            sources_list.append(new_item)
         
     return sources_list
 

@@ -1,34 +1,44 @@
-{% import 'macros.html' as macro %}
 {% extends 'base.html' %}
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+{% import 'macros.html' as macro %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        <h3>General News</h3>
-    {{macro.displayInfo(general)}}
-    <div class="row">
-        <h3>Technology News</h3>
-    {{macro.displayInfo(technology)}}
+    <div class="row mt-5">
+        <h2>General News</h2>
+        <hr>
+        {{macro.displayInfo(general)}}
+    <div class="row mt-5">
+        <h2>Technology News</h2>
+        <hr>
+        {{macro.displayInfo(technology)}}
     </div>
-    <div class="row">
-        <h3>Science News</h3>
-    {{macro.displayInfo(science)}}
+    <div class="row mt-5">
+        <h2>Science News</h2>
+        <hr>
+        {{macro.displayInfo(science)}}
     </div>
-    
+    <div class="row mt-5">
+        <h2>Business News</h2>
+        <hr>
+        {{macro.displayInfo(business_news)}}
     </div>
-    <div class="row">
-        <h3>Business News</h3>
-    {{macro.displayInfo(business_news)}}
+    <div class="row mt-5">
+        <h2>Entertainment News</h2>
+        <hr>
+        {{macro.displayInfo(entertainment)}}
     </div>
-    <div class="row">
-        <h3>Entertainment News</h3>
-    {{macro.displayInfo(entertainment)}}
-    </div>
-    <div class="row">
+    <div class="row mt-5">
         <h3>Health News</h3>
-    {{macro.displayInfo(health)}}
+        <hr>
+        {{macro.displayInfo(health)}}
     </div>
-    <div class="row">
+    <div class="row mt-5">
         <h3>Sports News</h3>
-    {{macro.displayInfo(sports)}}
+        <hr>
+        {{macro.displayInfo(sports)}}
+    </div>
 </div>
 {% endblock %}
