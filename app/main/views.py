@@ -23,7 +23,6 @@ def articles(id):
     route page for articles and the content availabe
     '''
     article = get_articles(id)
-    title = 'name'
 
     return render_template('articles.html', article= article)
     
