@@ -33,7 +33,7 @@ The user would like to.... :
 * [Python3.8](https://docs.python.org/3/)
 * Flask
 * Boostrap
-*Html/Css
+* Html/Css
 
 
 ## Support and contact details
