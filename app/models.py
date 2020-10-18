@@ -7,3 +7,13 @@ class Source:
         self.description = description
         self.url = url
         self.category = category
+
+def Articles:
+    
+    def __init__(self, id,author, title, urlToImage, url):
+        self.id = id
+        self.author = author
+        self.title = title
+        self.urlToImage= urlToImage
+        self.url = url
+        

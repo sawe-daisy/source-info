@@ -4,11 +4,13 @@ from .models import Source
 
 api_key = None
 base_url = None
+article_url = None
 
 def configure_request(app):
     global api_key, base_url
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_SOURCE_URL']
+    article_url = app.config['ARTICLES_URL']
 
 def get_sources(category):
     get_sources_url = base_url.format(category, api_key)
@@ -39,3 +41,15 @@ def process_results(results):
         sources_list.append(new_item)
         
     return sources_list
+
+def get_articles(domains):
+    get_articles_url = article_url.format(domains, api_key)
+    with urllib.request.urlopen(get_articles_url)as url:
+        articles_details = url.read()
+        article_response = json.loads(articles_details)
+        articles_list = []
+        if article_response:
+            id = article_response('id')
+            description = article_response('description')
+            url =article_response('url')
+            
